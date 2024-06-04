@@ -1,0 +1,41 @@
+.movie-list-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.movie-box {
+  width: 400px;
+  height: 250px;
+  border: 1px solid black;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 40px 0px #917c7c40;
+  color: black;
+  font: 20px;
+  font-weight: 400;
+  padding: 10px;
+}
+
+.movie-box img {
+  width: 102px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.genres {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.genres span {
+  border-radius: 10px;
+  background-color: #eaac99;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 3px;
+}
