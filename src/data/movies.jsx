@@ -1,3 +1,4 @@
+function MoviesList(){
 const movies = [
   {
     title: "Avatar",
@@ -177,4 +178,27 @@ const movies = [
   },
 ];
 
-export default movies;
+  return (
+    movies.map((item,index)=>{
+      return (
+      <div key={index} className="movie-card flex justify-center align-middle w-full">
+        <div className="flex w-[400px] h-[250px] border-2 rounded-xl p-4 gap-10">
+            <img className="size-28 object-cover rounded-lg" src={item.image}/>
+          <div className="flex flex-col justify-between">
+          <p>Title: {item.title}</p>
+          <p>Year: {item.year}</p>
+          <p>Runtime: {item.runtime}</p>
+          <p className="flex flex-wrap gap-2">Genres: {item.genres.map((genre,index)=>{
+            return (<span className="bg-[#EAAC99] rounded-[0.5rem] text-[0.8rem] p-1">{genre}</span>)
+          })}</p>
+          <p>IMB Ratings: {item.imdbRating}</p>
+          <p>IMB Votes: {item.imdbVotes}</p>
+          </div>
+        </div>
+      </div>
+      )
+    })
+  )
+} 
+
+export default MoviesList;
